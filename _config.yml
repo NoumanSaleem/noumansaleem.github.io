@@ -1,5 +1,5 @@
 name: Nouman's Blog
-theme: jekyll-theme-minimal
+theme: minima
 title: Nouman's blog
 description: AVR, Node.js, DevOps
 google_analytics: UA-104183064-1
