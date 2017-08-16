@@ -16,7 +16,7 @@ Before getting started, we need to select a framework for our appliation. Espres
 For your development environment, I strongly suggest using the wonderful [PlatformIO](platformio.org) toolkit. PlatformIO provides a uniform environment for programming the Feather Huzzah, and many other microcontrollers. I'll follow up this tutorial with a guide on configuring PlatformIO.
 
 ### Non-OS SDK
-In order for our application to run, the Non-OS sdk requires three things: a 'user_config.h' header file, `user_main.c` file and a function `void user_init()`. `user_init` is the default method executed when the chip starts. Here, we can initialize our timers, network connections, and other board features. In addition to `user_init`, include your `user_config`. At this point, your `user_main.c` should resemble the following.
+In order for our application to run, the Non-OS sdk requires three things: a `user_config.h` header file, a `user_main.c` file and a function `void user_init()`. `user_init` is the default method executed when the chip starts. Here, we can initialize our timers, network connections, and other board features. To get started, create an empty `user_config.h` file, and a `user_main.c` file with the following.
 ```
 #include "user_config.h"
 
