@@ -8,7 +8,7 @@ tags:
 - python
 ---
 
-In this article, we'll look interfacing with a seven-segment display using python and a Raspberry Pi.
+In this article, we'll explore interfacing with a seven-segment display using python and a Raspberry Pi.
 
 Parts used in this article:
 - [7-Segment clock display](https://www.adafruit.com/product/865)
