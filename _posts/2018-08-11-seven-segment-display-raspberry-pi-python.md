@@ -1,4 +1,12 @@
-# Driving a seven-segment display on Raspberry Pi with Python
+---
+layout: default
+title: Driving a seven-segment display on Raspberry Pi with Python
+category: avr
+tags:
+- avr
+- raspberryPi
+- python
+---
 
 In this article, we'll look interfacing with a seven-segment display using python and a Raspberry Pi.
 
