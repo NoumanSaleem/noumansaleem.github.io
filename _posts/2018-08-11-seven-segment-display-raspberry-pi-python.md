@@ -12,7 +12,6 @@ In this article, we'll explore interfacing with a seven-segment display using py
 
 Parts used in this article:
 - [7-Segment clock display](https://www.adafruit.com/product/865)
-- [74HC595 shift register](https://www.adafruit.com/product/450)
 - Raspberry Pi
 - Breadboard and lots of jumper wires
 
