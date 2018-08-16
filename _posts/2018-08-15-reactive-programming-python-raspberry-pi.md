@@ -8,7 +8,7 @@ tags:
 - python
 ---
 
-Reactive programming is by no measure a new paradigm. Admittedly, I've not tried my hand at writing an application solely with reactive principals. If you don't have prior knowldege of reactive programming, I highly suggest [this fantastic introduction](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754) by [Andre Staltz](https://twitter.com/andrestaltz). In this article we'll look at building an interactive application using a Raspberry Pi, Python, and some external inputs.
+Reactive programming is by no measure a new paradigm. Admittedly, I've not tried my hand at writing an application solely with reactive principles. If you don't have prior knowldege of reactive programming, I highly suggest [this fantastic introduction](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754) by [Andre Staltz](https://twitter.com/andrestaltz). In this article we'll look at building an interactive application using a Raspberry Pi, Python, and some external inputs.
 
 For our project, the user will be presented a button and a numeric keypad. When the button is activated, and the correct key pressed, we'll play an audio clip through the speakers.
 
