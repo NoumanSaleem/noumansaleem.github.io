@@ -145,5 +145,5 @@ finally:
     GPIO.cleanup()
 ```
 
-Overall, I enjoyed modeling the application around independent streams of user input. The code is free of global state or complicated nested event handling. You can check out the complete source code on GitHub: [NoumanSaleem/pi-seven-segment-display](https://github.com/NoumanSaleem/reactive-python-raspberry-pi).
+Overall, I enjoyed modeling the application around independent streams of user input. The code is free of global state or complicated nested event handling. You can check out the complete source code on GitHub: [NoumanSaleem/reactive-python-raspberry-pi](https://github.com/NoumanSaleem/reactive-python-raspberry-pi).
 
