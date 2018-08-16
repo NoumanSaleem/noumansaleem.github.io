@@ -17,7 +17,7 @@ Parts used in this article:
 - Tactile switch button
 - Raspberry Pi
 
-![fritzing]({{ site.url }}/reactive_python_fritzing.svg)
+![fritzing]({{ site.url }}/assets/reactive_python_fritzing.svg)
 
 A few dependencies to outline before getting started. Firstly, we'll make use of [RxPy](https://github.com/ReactiveX/RxPY), the python port for a reactive programming toolkit called ReactiveX. Secondly, we'll need a library for abstracting the implementation details for handling keypad input. There are a few open source packages available, however for this project I decided to write the keypad utility myself. I've included the code below, with some comments outlining the implementation.
 
@@ -60,7 +60,7 @@ def pushKeyPadPress(rowPins, bouncetime=200):
 
 One final thing to cover before we get to coding. Our application will make use of three data streams. We'll require a stream of button events, a stream of keypad events, and a stream which is a composition of both keypad and button events. Our application will rely on the combination stream to determine whether or not to play the audio file. Let's visualize these.
 
-![streams]({{ site.url }}/reactive_python_streams.svg)
+![streams]({{ site.url }}/assets/reactive_python_streams.svg)
 
 First, let's create our switch stream. RxPy streams are created using the ReactiveX `Observable` class. From the RxPy [README.md](https://github.com/ReactiveX/RxPY#the-basics):
 
@@ -95,7 +95,7 @@ keypadStream.with_latest_from(switchStream, lambda x, y: (x, y))\
 ```
 If you're having a difficult time wrapping your head around `with_latest_from`, I recommend checking out the interactive diagram over at [rxmarbles](http://rxmarbles.com/#withLatestFrom).
 
-!["rx marbles withlatestFrom"]({{ site.url }}/rxmarbles_with_latest_from.png)
+!["rx marbles withlatestFrom"]({{ site.url }}/assets/rxmarbles_with_latest_from.png)
 
 Our full application includes code for importing and configuring our dependencies, handling program interruption, and cleaning up before exiting. Check it out below:
 
