@@ -12,8 +12,9 @@ tags:
 - state
 ---
 
-
 Sometimes, storing even minimal state within React components can get unwieldy. For example, imagine a button component which allows a user to like an item in your application. Our component would need to allow toggling the state on or off, and should accept an initial value in case the user had previously favorited the item. In this post, we'll evaluate creating custom React hooks to encapsulate state management.
+
+![Like button list]({{ site.url }}/assets/react_hooks_like_toggle.png)
 
 For the use case I presented, the `useReducer` React hook seems like a simple solution.
 ```
@@ -98,12 +99,13 @@ const useLikeToggle = ({ id, liked }) => {
   const unlike = () => {
     dispatch({ type: actions.LOADING });
     api.unlike(id)
-      .then(() => dispatch({ type: actions.LIKED }))
+      .then(() => dispatch({ type: actions.UNLIKED }))
       .catch(error => dispatch({ type: actions.ERROR }, error));
   };
 
   return [state, { like, unlike }];
 };
+```
 
 Now, our button component can make use of our new hook.
 
@@ -117,4 +119,4 @@ const Button = (props) => {
 };
 ```
 
-In this post, we've explored how even an interaction as simple as toggling a boolean value can sometimes require complex state management. By creating custom hooks utilizing `useReducer`, we can significantly simplify our components.
+In this post, we've explored how an interaction as simple as toggling a boolean value can sometimes require complex state management. By creating custom hooks utilizing `useReducer`, we significantly simplified our code and made it easy to share API logic in other components.
