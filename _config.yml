@@ -3,3 +3,5 @@ theme: minima
 title: Nouman's blog
 description: AVR, Node.js, React, DevOps
 google_analytics: UA-104183064-1
+plugins:
+  - jekyll-sitemap
